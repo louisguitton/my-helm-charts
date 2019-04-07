@@ -14,7 +14,7 @@ ingress:
 storage: s3
 
 secrets:
-  htpasswd: ""
+  htpasswd: "louisguitton:$2y$05$PhiJ2rOVeIxGoMIDQL3FK.SX9jKKGbo1oLOd5czMl8tyDtRk.IGPu"
   s3:
     accessKey: "V6OBVNNIAJPD2H4MRUEQ"
     secretKey: "hDOyXzvLmm9LZ9IQdog4Ik1ZOKHKehRhvEqRnsodWiE"
