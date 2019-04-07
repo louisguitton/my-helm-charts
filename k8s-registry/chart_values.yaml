@@ -1,0 +1,26 @@
+ingress:
+  enabled: true
+  hosts:
+    - registry.louisguitton.com
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/proxy-body-size: "30720m"
+  tls:
+    - secretName: letsencrypt-prod
+      hosts:
+        - registry.louisguitton.com
+
+storage: s3
+
+secrets:
+  htpasswd: ""
+  s3:
+    accessKey: "V6OBVNNIAJPD2H4MRUEQ"
+    secretKey: "hDOyXzvLmm9LZ9IQdog4Ik1ZOKHKehRhvEqRnsodWiE"
+
+s3:
+  region: ams3
+  regionEndpoint: ams3.digitaloceanspaces.com
+  secure: true
+  bucket: louisguitton
